@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#102b46">
+<meta name="description" content="Encuentra los horarios de tutoría, correos y contactos de las Escuelas Profesionales de Economía y Finanzas de la Universidad Andina del Cusco.">
+<title>Tutoría | Economía y Finanzas — UAC</title>
+<style>
+:root{--navy:#102b46;--navy2:#173d5d;--gold:#d5ad62;--gold-light:#f4e9d0;--ink:#233447;--muted:#667789;--paper:#f6f8fb;--white:#fff;--line:#e3eaf0;--green:#24765b;--shadow:0 18px 45px rgba(16,43,70,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,"Segoe UI",Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}a{color:inherit}.wrap{width:min(1160px,92%);margin:auto}
+header{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+header:before,header:after{content:"";position:absolute;border:1px solid rgba(213,173,98,.24);border-radius:50%;pointer-events:none}
+header:before{width:500px;height:500px;right:-100px;top:-300px}header:after{width:350px;height:350px;right:20px;top:-210px}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 0;position:relative;z-index:1;border-bottom:1px solid rgba(255,255,255,.12)}
+.brand{display:flex;align-items:center;gap:16px;font-weight:700;letter-spacing:.02em}.brand img{display:block;object-fit:contain;max-height:68px;width:auto;max-width:150px}.brand-divider{height:54px;width:1px;background:rgba(255,255,255,.28)}.school-logo{display:block;object-fit:contain;max-height:68px;width:auto;max-width:86px;background:#fff;border-radius:50%;padding:3px}
+.nav a{text-decoration:none;color:#e7edf4;font-size:14px;margin-left:23px}.nav a:hover{color:var(--gold)}
+.hero{padding:68px 0 82px;position:relative;z-index:1;max-width:790px}.eyebrow{color:var(--gold);font-weight:700;font-size:12px;letter-spacing:.19em;text-transform:uppercase}
+h1{font-size:clamp(35px,5.2vw,62px);line-height:1.08;letter-spacing:-.04em;margin:17px 0 20px;font-weight:750}h1 span{color:var(--gold)}.hero p{max-width:660px;color:#d9e2eb;font-size:17px;margin:0 0 28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:12px 19px;text-decoration:none;font-weight:700;font-size:14px;border:1px solid transparent;transition:.2s}.btn-gold{background:var(--gold);color:var(--navy)}.btn-gold:hover{background:#e5c47f;transform:translateY(-1px)}.btn-outline{border-color:rgba(255,255,255,.35);color:#fff;margin-left:8px}.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+main{padding:0 0 65px}.welcome{display:grid;grid-template-columns:1.3fr .7fr;gap:24px;margin-top:-30px;position:relative;z-index:2}.welcome-card,.quote-card{border-radius:20px;padding:26px 28px;box-shadow:var(--shadow)}.welcome-card{background:#fff}.welcome-card h2{font-size:21px;margin:0 0 8px;color:var(--navy)}.welcome-card p{margin:0;color:var(--muted)}.quote-card{background:var(--gold-light);display:flex;flex-direction:column;justify-content:center}.quote-card strong{font-family:Georgia,serif;font-size:23px;line-height:1.3;color:var(--navy);font-weight:600}.quote-card span{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:#806638;margin-top:12px}
+.section{padding-top:58px}.section-heading{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:22px}.section-heading h2{color:var(--navy);font-size:clamp(25px,3vw,34px);letter-spacing:-.03em;margin:5px 0}.section-heading p{margin:0;color:var(--muted);max-width:580px}.semester{font-size:12px;background:#e9eef4;color:var(--navy);padding:8px 12px;border-radius:999px;white-space:nowrap;font-weight:700}
+.tabs{display:flex;gap:8px;background:#e9eef4;border-radius:14px;padding:6px;width:fit-content;margin-bottom:23px}.tab{border:0;background:transparent;color:#586b7e;font:inherit;font-size:14px;font-weight:700;padding:11px 21px;border-radius:10px;cursor:pointer}.tab[aria-selected="true"]{background:var(--navy);color:#fff;box-shadow:0 5px 14px #102b4620}
+.notice{border:1px solid #e6d7b8;background:#fffaf0;padding:13px 16px;border-radius:12px;color:#6e5b38;font-size:13px;margin:0 0 20px}.schedule-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.person-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 8px 24px rgba(16,43,70,.035);display:flex;flex-direction:column;min-width:0}.role{color:#8b6b2f;text-transform:uppercase;font-size:10px;letter-spacing:.11em;font-weight:800;line-height:1.5}.person-card h3{font-size:18px;color:var(--navy);line-height:1.3;margin:10px 0 5px}.position{font-size:13px;color:var(--muted);margin:0 0 15px;min-height:38px}.location{display:flex;align-items:flex-start;gap:8px;background:#f2f6f9;border-radius:10px;padding:10px 11px;font-size:12px;color:#3f566b;margin-bottom:17px}.location b{color:var(--navy)}.days{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px;margin-bottom:17px}.day{border:1px solid var(--line);border-radius:8px;padding:8px 3px;text-align:center;min-height:62px}.day span{display:block;font-size:9px;color:#7a8a99;font-weight:800;text-transform:uppercase;letter-spacing:.04em}.day b{display:block;font-size:10px;line-height:1.35;margin-top:5px;color:var(--navy);overflow-wrap:anywhere}.day.open{background:#eef7f2;border-color:#d5e9df}.day.open b{color:var(--green)}.day.empty b{color:#b8c2cc;font-weight:500}.contacts{border-top:1px solid var(--line);padding-top:15px;margin-top:auto;display:grid;gap:9px}.contact-link{display:flex;gap:9px;align-items:center;text-decoration:none;font-size:12px;color:#52687b;overflow-wrap:anywhere}.contact-link strong{color:var(--navy);font-weight:650}.contact-link:hover strong{color:#9b762e}.contact-icon{width:28px;height:28px;flex:0 0 28px;border-radius:8px;background:#edf2f6;display:grid;place-items:center;font-size:13px}
+.empty-state{padding:24px;background:#fff;border:1px dashed var(--line);border-radius:15px;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.step{background:#fff;border:1px solid var(--line);padding:22px;border-radius:16px}.step-num{width:34px;height:34px;border-radius:10px;background:var(--gold-light);color:#765a25;display:grid;place-items:center;font-weight:800}.step h3{margin:12px 0 6px;font-size:16px;color:var(--navy)}.step p{margin:0;font-size:13px;color:var(--muted)}
+.cta{margin-top:55px;background:var(--navy);color:#fff;border-radius:22px;padding:34px;display:flex;justify-content:space-between;align-items:center;gap:22px}.cta h2{margin:0 0 7px;font-size:25px}.cta p{margin:0;color:#d1dce7;max-width:650px;font-size:14px}.cta-actions{flex-shrink:0}
+footer{background:#0b2035;color:#c2ced9;padding:26px 0;font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center}.footer-inner strong{color:#fff}.footnote{color:#aab8c6;margin-top:8px}
+@media(max-width:900px){.schedule-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.welcome{grid-template-columns:1fr}.quote-card{padding:22px}.nav-links{display:none}.hero{padding:54px 0 70px}}
+@media(max-width:600px){.brand img{max-height:52px;max-width:112px}.brand-divider{height:42px}.school-logo{max-width:64px}.schedule-grid,.steps{grid-template-columns:1fr}.section-heading{align-items:flex-start;flex-direction:column}.semester{white-space:normal}.days{gap:4px}.day{padding:7px 1px}.day b{font-size:9px}.person-card{padding:18px}.hero p{font-size:15px}.btn-outline{margin:10px 0 0}.cta{padding:25px;align-items:flex-start;flex-direction:column}.footer-inner{align-items:flex-start;flex-direction:column}.welcome-card,.quote-card{padding:22px}.nav{padding:16px 0}}
+@media print{header{background:#102b46!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.tabs,.cta-actions{display:none}.schedule-grid{grid-template-columns:repeat(2,1fr)}.person-card{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap">
+  <nav class="nav" aria-label="Navegación principal">
+   <div class="brand"><img src="assets/logo-uac.png" alt="Logotipo de la Universidad Andina del Cusco"><span class="brand-divider" aria-hidden="true"></span><img class="school-logo" src="assets/logo-economia-finanzas.png" alt="Logotipo de Economía y Finanzas UAC"></div>
+   <div class="nav-links"><a href="#horarios">Horarios</a><a href="#acompanamiento">¿Cómo te ayudamos?</a><a href="#contacto">Contacto</a></div>
+  </nav>
+  <div class="hero">
+   <div class="eyebrow">Tutoría universitaria · Semestre 2026-II</div>
+   <h1>Tu camino profesional<br>también se construye <span>con apoyo.</span></h1>
+   <p>Este es un espacio para orientarte, resolver tus dudas y acompañarte durante tu vida universitaria. Encuentra los horarios de atención y comunícate con el equipo de tutoría de tu escuela profesional.</p>
+   <a class="btn btn-gold" href="#horarios">Consultar horarios <span aria-hidden="true">↓</span></a>
+   <a class="btn btn-outline" href="#contacto">Necesito orientación</a>
+  </div>
+ </div>
+</header>
+<main class="wrap">
+ <section class="welcome" aria-label="Bienvenida">
+  <div class="welcome-card"><h2>Un espacio para escucharte y orientarte</h2><p>La etapa universitaria trae retos, decisiones y nuevas oportunidades. Acércate a tutoría para recibir orientación académica y conocer los canales de acompañamiento disponibles. No tienes que resolver todas tus dudas por tu cuenta.</p></div>
+  <div class="quote-card"><strong>“Cada paso que das en la universidad te acerca a la profesional que quieres ser.”</strong><span>Tu esfuerzo importa. Sigue adelante.</span></div>
+ </section>
+ <section class="section" id="horarios">
+  <div class="section-heading"><div><div class="eyebrow" style="color:#94743b">Información para estudiantes</div><h2>Encuentra tu horario de tutoría</h2><p>Selecciona tu escuela y revisa los días, las horas y el lugar de atención de cada responsable.</p></div><span class="semester">Semestre académico 2026-II</span></div>
+  <div class="tabs" role="tablist" aria-label="Escuela profesional">
+   <button class="tab" id="tab-economia" role="tab" aria-selected="true" aria-controls="panel-horarios" data-school="economia">Economía</button>
+   <button class="tab" id="tab-finanzas" role="tab" aria-selected="false" aria-controls="panel-horarios" data-school="finanzas">Finanzas</button>
+  </div>
+  <div class="notice">Los horarios corresponden al documento de tutoría 2026-II proporcionado. Si necesitas confirmar una atención o el horario cambió, comunícate directamente con el responsable antes de acercarte.</div>
+  <div id="panel-horarios" role="tabpanel" aria-labelledby="tab-economia"><div class="schedule-grid" id="schedule-grid"></div></div>
+ </section>
+ <section class="section" id="acompanamiento">
+  <div class="section-heading"><div><div class="eyebrow" style="color:#94743b">Estamos para acompañarte</div><h2>¿Cómo puedes empezar?</h2><p>Un primer mensaje puede ayudarte a dar el siguiente paso. Acércate con confianza y explica brevemente qué orientación necesitas.</p></div></div>
+  <div class="steps">
+   <article class="step"><div class="step-num">01</div><h3>Identifica tu consulta</h3><p>Piensa en el tema que deseas conversar: orientación académica, formación o información sobre prácticas preprofesionales.</p></article>
+   <article class="step"><div class="step-num">02</div><h3>Revisa el horario</h3><p>Elige el responsable que corresponda a tu consulta y verifica el día, la hora y la ubicación de atención.</p></article>
+   <article class="step"><div class="step-num">03</div><h3>Comunícate con confianza</h3><p>Escribe al correo institucional o llama al número publicado para consultar disponibilidad o coordinar la atención.</p></article>
+  </div>
+ </section>
+ <section class="cta" id="contacto"><div><h2>¿Tienes dudas? Estamos aquí para orientarte.</h2><p>Comunícate con los responsables de tutoría usando los datos de contacto que aparecen en cada tarjeta. Tu bienestar y desarrollo académico también forman parte de tu camino profesional.</p></div><div class="cta-actions"><a class="btn btn-gold" href="#horarios">Ver responsables y contactos ↑</a></div></section>
+</main>
+<footer><div class="wrap footer-inner"><div><strong>Universidad Andina del Cusco</strong><div>Escuelas Profesionales de Economía y Finanzas · Tutoría</div><div class="footnote">Información de horarios: semestre 2026-II.</div></div><div>Orientación · Acompañamiento · Desarrollo profesional</div></div></footer>
+<script>
+const people = {
+ economia: [
+  {role:"Coordinador SITAP E.P. Economía",name:"Mgt. Mabel Fiorella Gutiérrez Chávez",email:"mgutierrezc@uandina.edu.pe",phone:"984387785",place:"Módulo de tutoría CEAC - 108",hours:["08:00–14:00","","08:00–12:00","",""]},
+  {role:"Tutor de formación",name:"Mgt. Maria Lourdes del Castillo Bejar",email:"mdelcastillo@uandina.edu.pe",phone:"982074315",place:"Módulo de tutoría CEAC - 411",hours:["","11:00–13:00","07:00–09:00","10:00–11:00",""]},
+  {role:"Coordinador del ejercicio preprofesional para la vinculación e inserción laboral de la E.P. Economía",name:"Mgt. Maria Lourdes del Castillo Bejar",email:"mdelcastillo@uandina.edu.pe",phone:"982074315",place:"Oficina 4.º piso CEAC - 411",hours:["10:00–13:00","","","11:00–13:00","08:00–13:00"]}
+ ],
+ finanzas: [
+  {role:"Coordinador SITAP E.P. Finanzas",name:"Mgt. Mabel Fiorella Gutiérrez Chávez",email:"mgutierrezc@uandina.edu.pe",phone:"984387785",place:"Módulo de tutoría CEAC - 108",hours:["","11:00–15:00","12:00–14:00","11:00–15:00",""]},
+  {role:"Tutor de formación",name:"Mgt. Mabel Fiorella Gutiérrez Chávez",email:"mgutierrezc@uandina.edu.pe",phone:"984387785",place:"Módulo de tutoría CEAC - 108",hours:["","","","","08:00–09:00 / 11:00–15:00"]},
+  {role:"Coordinador del ejercicio preprofesional para la vinculación e inserción laboral de la E.P. Finanzas",name:"Mgt. Bertha Huamán Pérez",email:"bhuaman@uandina.edu.pe",phone:"945018231",place:"Oficina 1.er piso CEAC - 109",hours:["09:00–11:00","11:00–14:00","09:00–11:00","11:00–14:00",""]}
+ ]
+};
+const days=["Lun","Mar","Mié","Jue","Vie"];
+const grid=document.getElementById("schedule-grid");
+function render(school){
+ grid.innerHTML="";
+ people[school].forEach(p=>{
+  const card=document.createElement("article");card.className="person-card";
+  const role=document.createElement("div");role.className="role";role.textContent=p.role;
+  const name=document.createElement("h3");name.textContent=p.name;
+  const position=document.createElement("p");position.className="position";position.textContent="Responsable de tutoría";
+  const loc=document.createElement("div");loc.className="location";loc.innerHTML='<span aria-hidden="true">⌖</span><span><b>Lugar de atención</b><br></span>';loc.lastElementChild.append(document.createTextNode(p.place));
+  const ds=document.createElement("div");ds.className="days";ds.setAttribute("aria-label","Horario semanal");
+  p.hours.forEach((h,i)=>{const d=document.createElement("div");d.className="day "+(h?"open":"empty");const s=document.createElement("span");s.textContent=days[i];const b=document.createElement("b");b.textContent=h||"—";d.append(s,b);ds.append(d)});
+  const contacts=document.createElement("div");contacts.className="contacts";
+  const email=document.createElement("a");email.className="contact-link";email.href="mailto:"+p.email;email.innerHTML='<span class="contact-icon" aria-hidden="true">✉</span><span><small>Correo institucional</small><br><strong></strong></span>';email.querySelector("strong").textContent=p.email;
+  const phone=document.createElement("a");phone.className="contact-link";phone.href="tel:"+p.phone.replace(/\s/g,"");phone.innerHTML='<span class="contact-icon" aria-hidden="true">☎</span><span><small>Teléfono de contacto</small><br><strong></strong></span>';phone.querySelector("strong").textContent=p.phone;
+  contacts.append(email,phone);card.append(role,name,position,loc,ds,contacts);grid.append(card);
+ });
+ document.getElementById("panel-horarios").setAttribute("aria-labelledby","tab-"+school);
+}
+document.querySelectorAll(".tab").forEach(btn=>btn.addEventListener("click",()=>{
+ document.querySelectorAll(".tab").forEach(b=>b.setAttribute("aria-selected",String(b===btn)));
+ render(btn.dataset.school);
+}));
+render("economia");
+</script>
+</body>
+</html>
